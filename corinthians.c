@@ -1,31 +1,24 @@
 #include <stdio.h>
-#include <locale.h>
 
-int main() {
-    setlocale(LC_ALL, "");
-    float fatura;
-    
-    printf("Digite sua fatura: ");
-    scanf("%f", &fatura);
+int main(){
+   
+int golsc; //corinthians
+int golsp; // palmeiras
 
-    if (fatura <= 1000.00) {
-        printf("Não haverá cashback\n");
-    }
+printf ("digite quantos gols o Corinthians marcou\n");
+scanf ("%d", &golsc);
 
-    if (fatura > 1000.00 && fatura <= 4000.00) {
-        printf("Cashback de 1%%\n");
-    }
+printf ("digite quantos gols o palmeiras marcou\n");
+scanf ("%d", &golsp);
 
-    if (fatura > 4000.00 && fatura <= 8000.00) {
-        printf("Cashback de 2%%\n");
-    }
+if (golsc > golsp){
+   printf ("corinthians ganhou\n");
+} else if (golsp > golsc){
+   printf ("palmeiras ganhou\n");
+} else 
+   printf ("empate\n");
+} 
 
-    if (fatura > 8000.00) {
-        printf("Cashback de 5%%\n");
-    }
-
-    return 0;
-}
 
 
 
